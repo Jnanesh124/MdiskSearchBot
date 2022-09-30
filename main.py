@@ -25,11 +25,11 @@ User = Client(
 
 @Bot.on_message(filters.private & filters.command("start"))
 async def start_handler(_, event: Message):
-	await event.reply_photo("https://telegra.ph/file/165941ae764a56d6d9c89.jpg",
+	await event.reply_photo("https://te.legra.ph/file/50276889b7b4de006cff5.jpg",
                                 caption=Config.START_MSG.format(event.from_user.mention),
                                 reply_markup=InlineKeyboardMarkup([
-                                    [InlineKeyboardButton("Our Channel", url="https://t.me/cynitemovies"),
-                                     InlineKeyboardButton("Creator", url="https://t.me/Cyniteofficial")],
+                                    [InlineKeyboardButton("Our Channel", url="https://t.me/rockersbackup"),
+                                     InlineKeyboardButton("Creator", url="https://t.me/Beastonejnanesh")],
                                     [InlineKeyboardButton("Help", callback_data="Help_msg"),
                                      InlineKeyboardButton("About", callback_data="About_msg")]]))
 
@@ -38,8 +38,8 @@ async def help_handler(_, event: Message):
 
     await event.reply_text(Config.ABOUT_HELP_TEXT.format(event.from_user.mention),
         reply_markup=InlineKeyboardMarkup([
-            [InlineKeyboardButton("Our Channel", url="https://t.me/iP_Movies"),
-             InlineKeyboardButton("Our Group", url="https://t.me/iPopcornMovieGroup"), 
+            [InlineKeyboardButton("Our Channel", url="https://t.me/rockersbackup"),
+             InlineKeyboardButton("Our Group", url="https://t.me/rockersmoviejnaneshgroup"), 
              InlineKeyboardButton("About", callback_data="About_msg")]
         ])
     )
@@ -60,7 +60,7 @@ async def inline_handlers(_, event: Message):
             answers += f'**🍿 Title ➠ ' + '' + f_text.split("\n", 1)[0] + '' + '\n\n📜 About ➠ ' + '' + f_text.split("\n", 2)[-1] + ' \n\n▰▱▰▱▰▱▰▱▰▱▰▱▰▱\nLink Will Auto Delete In 60Sec...⏰\n▰▱▰▱▰▱▰▱▰▱▰▱▰▱\n\n**'
     try:
         msg = await event.reply_text(answers)
-        await asyncio.sleep(60)
+        await asyncio.sleep(30)
         await event.delete()
         await msg.delete()
     except:
@@ -77,11 +77,11 @@ async def button(bot, cmd: CallbackQuery):
 			reply_markup=InlineKeyboardMarkup(
 				[
 					[
-						InlineKeyboardButton("Our Channel", url="https://t.me/cyniteMovies"),
-						InlineKeyboardButton("Join", url="https://t.me/Technicalcynite")
+						InlineKeyboardButton("Our Channel", url="https://t.me/rockersbackup"),
+						InlineKeyboardButton("Join", url="https://t.me/Beastonejnanesh")
 					],
 					[
-						InlineKeyboardButton("Creator", url="https://t.me/cyniteofficial"),
+						InlineKeyboardButton("Creator", url="https://t.me/Beastonejnanesh"),
 						InlineKeyboardButton("Home", callback_data="gohome")
 					]
 				]
@@ -96,10 +96,10 @@ async def button(bot, cmd: CallbackQuery):
 				[
 					[
 						InlineKeyboardButton("About", callback_data="About_msg"),
-						InlineKeyboardButton("Our Channel", url="https://t.me/cyniteMovies")
+						InlineKeyboardButton("Our Channel", url="https://t.me/rockersbackup")
 					], 
                                         [
-						InlineKeyboardButton("Owner", url="https://t.me/cyniteofficial"),
+						InlineKeyboardButton("Owner", url="https://t.me/Beastonejnanesh"),
 						InlineKeyboardButton("Home", callback_data="gohome")
 					]
 				]
