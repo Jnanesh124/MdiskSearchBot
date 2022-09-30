@@ -1,4 +1,4 @@
-# (c) @Royalkrrishna
+# (c) @Beastonejnanesh
 
 import datetime
 from configs import Config
