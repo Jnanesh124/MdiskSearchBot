@@ -117,8 +117,8 @@ async def button(bot, cmd: CallbackQuery):
 						InlineKeyboardButton("About", callback_data="About_msg")
 					],
 					[
-						InlineKeyboardButton("Support", url="https://t.me/cyniteofficial"),
-						InlineKeyboardButton("Channel", url="https://t.me/cynitemovies")
+						InlineKeyboardButton("Support", url="https://t.me/Beastonejnanesh"),
+						InlineKeyboardButton("Channel", url="https://t.me/rockersbackup")
 					]
 				]
 			),
