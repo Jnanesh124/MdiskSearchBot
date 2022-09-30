@@ -1,4 +1,4 @@
-# (c) @RoyalKrrishna
+# (c) @Beastonejnanesh
 
 from configs import Config
 from pyrogram import Client, filters, idle
