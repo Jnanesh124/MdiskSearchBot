@@ -48,6 +48,7 @@ async def help_handler(_, event: Message):
 async def inline_handlers(_, event: Message):
     if event.text == '/start':
         return
+    answers = f'****'
     async for message in User.search_messages(chat_id=Config.CHANNEL_ID, limit=50, query=event.text):
         if message.text:
             thumb = None
@@ -56,7 +57,7 @@ async def inline_handlers(_, event: Message):
             if "|||" in message.text:
                 f_text = message.text.split("|||", 1)[0]
                 msg_text = message.text.html.split("|||", 1)[0]
-            answers += f'**🍿Movie name ➠ ' + '' + f_text.split("\n", 1)[0] + '' + '\n\n🔗movie language ➠ ' + '' + f_text.split("\n", 2)[-1] + ' **'
+            answers += f'**🍿 Movie name ➠ ' + '' + f_text.split("\n", 1)[0] + '' + '\n\n🔗 movie language ➠ ' + '' + f_text.split("\n", 2)[-1] + ' **'
     try:
         msg = await event.reply_text(answers)
         await asyncio.sleep(60)
